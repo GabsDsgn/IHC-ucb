@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Valor Absoluto</title>
+</head>
+<body>
+  <h1>Valor Absoluto</h1>
+  <label for="absInput">Número:</label>
+  <input type="number" id="absInput">
+  <button id="calcularAbsolutoButton">Calcular Valor Absoluto</button>
+  <div id="absResultado"></div>
+
+  <script>
+    document.getElementById("calcularAbsolutoButton").addEventListener("click", function() {
+      var numero = parseFloat(document.getElementById("absInput").value);
+      var absoluto = Math.abs(numero);
+      document.getElementById("absResultado").innerHTML = "Valor absoluto: " + absoluto;
+    });
+  </script>
+</body>
+</html>

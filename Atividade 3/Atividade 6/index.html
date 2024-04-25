@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cálculo de Comissão</title>
+</head>
+<body>
+  <h1>Cálculo de Comissão</h1>
+  <label for="vendaInput">Valor da Venda:</label>
+  <input type="number" id="vendaInput">
+  <label for="comissaoInput">Taxa de Comissão (%):</label>
+  <input type="number" id="comissaoInput" value="10">
+  <button id="calcularComissaoButton">Calcular Comissão</button>
+  <div id="comissaoResultado"></div>
+
+  <script>
+    document.getElementById("calcularComissaoButton").addEventListener("click", function() {
+      var valorVenda = parseFloat(document.getElementById("vendaInput").value);
+      var taxaComissao = parseFloat(document.getElementById("comissaoInput").value);
+      var comissao = (valorVenda * taxaComissao) / 100;
+      document.getElementById("comissaoResultado").innerHTML = "Comissão: " + comissao.toFixed(2);
+    });
+  </script>
+</body>
+</html>

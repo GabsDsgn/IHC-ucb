@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arredondamento de Valor</title>
+</head>
+<body>
+  <h1>Arredondamento de Valor</h1>
+  <label for="roundInput">Número:</label>
+  <input type="number" id="roundInput">
+  <label for="decimalInput">Casas Decimais:</label>
+  <input type="number" id="decimalInput" value="2">
+  <button id="arredondarValorButton">Arredondar Valor</button>
+  <div id="roundResultado"></div>
+
+  <script>
+    document.getElementById("arredondarValorButton").addEventListener("click", function() {
+      var numero = parseFloat(document.getElementById("roundInput").value);
+      var casasDecimais = parseInt(document.getElementById("decimalInput").value);
+      var arredondado = numero.toFixed(casasDecimais);
+      document.getElementById("roundResultado").innerHTML = "Valor arredondado: " + arredondado;
+    });
+  </script>
+</body>
+</html>
